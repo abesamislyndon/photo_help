@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
 
   def result_page
+  	 @user = Vendor.first
   end
   
 end

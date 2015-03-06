@@ -11,6 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150306074532) do
+
+  create_table "vendor_helpers", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.text     "address",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "vendors", force: :cascade do |t|
+    t.string   "helper",     limit: 255
+    t.string   "name",       limit: 255
+    t.text     "address",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
 end
