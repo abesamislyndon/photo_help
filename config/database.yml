@@ -1,0 +1,23 @@
+
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: 
+  socket: /tmp/mysql.sock  
+
+development:
+  <<: *default
+  database: help_photo
+
+test:
+  <<: *default
+  database: help_photo_test
+
+
+production:
+  <<: *default
+  database: help_photo_production
+  username: help_photo
+  password: <%= ENV['HELP_PHOTO_DATABASE_PASSWORD'] %>
