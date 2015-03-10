@@ -1,0 +1,14 @@
+    <div class="container">
+      <div class="row">
+       			<div class="col-md-12">
+       				<div class="search-container">
+       					<input type="text" name = "search">
+       					<button class="search-btn">search</button>
+       				</div>
+       				<div class="view-all-container">
+					  find vendor here
+       				 <span><%= link_to "view all", {:controller => "vendors", :action => "all"}, :class=>"view" %>	</span>
+       				</div>
+       	        </div>
+      </div>
+      <hr>

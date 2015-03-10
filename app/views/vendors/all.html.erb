@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="result_wrapper">
+			<% @vendor.each do |data| %>    
+			 <div class="col-sm-4">
+			 	<div class="box">
+			 		<ul>
+			 		   <li><span>VENDOR NAME:</span>&nbsp;<%= data.name %></li>
+			 		   <li><span>ADDRESS:</span>&nbsp;<%= data.address %> </li>
+			 		    <li><span>TEL NO:</span>&nbsp;<%= data.address %></li>
+			 		</ul>
+			 	</div>
+			  </div>
+           <% end %>
+			</div>
+		</div>
+	</div>
+</div>
