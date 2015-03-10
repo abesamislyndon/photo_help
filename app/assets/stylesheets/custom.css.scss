@@ -41,6 +41,27 @@ input{
 
 }
 
+.form{
+	margin-top:120px; 
+}
+.box{
+	background:rgba(255,255,255,0.8);
+	padding:10px;
+	margin-bottom:80px; 
+
+ 
+}
+ ul{
+ 	list-style: none;
+ }
+ li{
+ 	padding:5px; 
+ 	margin-left:-40px; 
+ }
+span{
+	font-weight:bold; 
+}
+
 /*------------result page style------------------*/
 .result_wrapper{
 	margin-top:230px;  
