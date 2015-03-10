@@ -6,4 +6,5 @@ Rails.application.routes.draw do
    get  'vendors/login'
    get  'vendors/all'
    get  'vendors/new'
+
 end
