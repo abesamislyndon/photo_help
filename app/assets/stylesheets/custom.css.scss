@@ -83,3 +83,16 @@ hr{
         outline: none;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
       }
+
+/* header menu style*/
+.navbar-fixed-top{
+	background:rgba(0,0,0,0.4);
+	border:1px solid #000; 
+}
+.nav {
+	
+	li a{
+		margin:8px;
+		color:#4DB6AC !important;
+	}
+}
