@@ -4,8 +4,8 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: domoncas 
-  socket: /var/run/mysqld/mysqld.sock   
+  password: 
+  socket: /tmp/mysql.sock 
 
 
 development:

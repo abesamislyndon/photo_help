@@ -1,0 +1,13 @@
+find socket for mysql in local - database.yml
+-->  mysql_config --socket
+
+start mysql command
+-->  service.mysql start
+
+install permanent rvm in shell (edit .bash_profile)
+--> [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+- overwtrite heroku push form git
+
+heroku git:remote -a project
+git push -f heroku master

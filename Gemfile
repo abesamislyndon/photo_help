@@ -15,6 +15,7 @@ gem 'devise', '~> 3.4.1'
 gem 'paperclip', '~> 4.2.1'
 
 
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
@@ -22,3 +23,6 @@ group :development, :test do
   gem 'mysql2'
 end
 
+group :production do
+  gem 'pg'
+end
