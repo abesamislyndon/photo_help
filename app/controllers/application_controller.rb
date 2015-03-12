@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_user!, :except => [:index, :all]
 
+
   before_filter :set_cache_buster
 
   def set_cache_buster
@@ -12,5 +13,4 @@ class ApplicationController < ActionController::Base
     response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
   end
 
-  
 end
