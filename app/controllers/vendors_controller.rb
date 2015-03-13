@@ -1,9 +1,15 @@
 class VendorsController < ApplicationController
 
-  def index
+def index
+    if params[:search]
+      @vendor = Vendor.search(params[:search]).order("created_at DESC")
+    else
+      @vendor = Vendor.order("created_at DESC")
+    end
   end
 
-  def login
+  def result
+      @vendor = Vendor.search(params[:search]).order("created_at DESC")
   end
 
 
