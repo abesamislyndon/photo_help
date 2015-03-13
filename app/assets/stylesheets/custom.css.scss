@@ -10,7 +10,7 @@ body{
 /*---------------------assets style----------------------*/
 
 .search-container{
-	margin-top:420px;
+	margin-top:320px;
 	text-align: center;
 }
 input{
@@ -33,7 +33,7 @@ input{
 	letter-spacing:1px;
 	text-align: center;
 	margin-top:10px !important; 
- 
+
  	.view{
 		color:#00BCD4;
 
@@ -46,8 +46,14 @@ input{
 }
 .box{
 	background:rgba(255,255,255,0.8);
-	padding:10px;
-	margin-bottom:30px;  
+	padding:1px 0px;
+	margin-bottom:60px;
+	margin-left: -5px;
+	text-align: center;  
+}
+.box img{
+	width:100%;
+	height: auto; 
 }
  ul{
  	list-style: none;

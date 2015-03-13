@@ -1,12 +1,10 @@
-<div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="result_wrapper">
+<div class="container bg">
+    <div class="result_wrapper">
 			<% @vendor.each do |data| %>    
-			 <div class="col-sm-4">
+			 <div class="col-sm-3">
 			 	<div class="box">
 			 		<ul>
-			 		   <li><span><%= image_tag data.image.url(:medium)%></li>
+			 		   <li><span><%= image_tag data.image%></li>
 			 		   <li><span>VENDOR NAME:</span>&nbsp;<%= data.name %></li>
 			 		   <li><span>ADDRESS:</span>&nbsp;<%= data.address %> </li>
 			 		   <li><span>TEL NO:</span>&nbsp;<%= data.telno %></li>
@@ -16,6 +14,4 @@
 			  </div>
            <% end %>
 			</div>
-		</div>
 	</div>
-</div>

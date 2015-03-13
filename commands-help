@@ -9,5 +9,6 @@ install permanent rvm in shell (edit .bash_profile)
 
 - overwtrite heroku push form git
 
+- add local git to push to heroku  commands
 heroku git:remote -a project
 git push -f heroku master
