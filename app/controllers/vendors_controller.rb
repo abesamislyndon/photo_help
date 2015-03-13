@@ -17,15 +17,16 @@ class VendorsController < ApplicationController
 
   def create
   	@vendor = Vendor.new(vendor_params)
-  	if @vendor.save
+   	if @vendor.save
        redirect_to vendors_all_path
+ 
   	end		
   	end
 
- private
 
+ private
     def vendor_params
-      params.require(:vendor).permit(:name, :address)
+      params.require(:vendor).permit(:name, :address, :image)
     end
 
   
