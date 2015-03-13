@@ -18,8 +18,9 @@ class VendorsController < ApplicationController
   def create
   	@vendor = Vendor.new(vendor_params)
    	if @vendor.save
-       redirect_to vendors_all_path
- 
+       redirect_to vendors_all_path 
+    else 
+    render 'new'    
   	end		
   	end
 

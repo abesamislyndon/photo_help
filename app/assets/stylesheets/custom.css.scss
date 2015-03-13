@@ -97,3 +97,37 @@ hr{
 		font-weight:bold; 
 	}
 }
+
+/*-----------------login style form------------ */
+.checkbox{
+	margin-left:21px;
+	color:#fff; 
+}
+.min-pass{
+	margin-bottom:9px !important; 
+}
+.form-control{
+	margin-bottom: 10px;
+	height:50px; 
+}
+
+.login-con{
+	padding:30px;
+	background:rgba(255,255,255,0.5);  
+}
+
+ @media(min-width:980px) {
+	.login-con{
+		width:50%;
+		margin: auto;
+		margin-top:220px;
+	}
+}
+ @media(min-width:768px) {
+	.login-con{
+		width:50%;
+		margin: auto;
+		margin-top:220px;
+	}
+}
+
