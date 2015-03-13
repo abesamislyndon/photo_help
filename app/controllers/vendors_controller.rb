@@ -33,7 +33,7 @@ def index
 
  private
     def vendor_params
-      params.require(:vendor).permit(:name, :address, :image)
+      params.require(:vendor).permit(:name, :address, :image, :telno)
     end
 
   
