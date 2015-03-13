@@ -1,7 +1,7 @@
   <div class="control-group">
       <div class="login-con">
           <h4 class = "header-login">SIGN UP</h4>
-     <%= form_for(resource, :html => {:class => "form-signin"},  as: resource_name, url: session_path(resource_name)) do |f| %>
+     <%= form_for(resource, :html => {:class => "form-signin"},  as: resource_name, url: registration_path(resource_name)) do |f| %>
      
      <%= f.label :email, :class => "sr-only" %>
      <%= f.email_field :email, autofocus: true, :class =>"form-control", :placeholder =>"Email Address" %>
@@ -13,6 +13,7 @@
       <%= f.password_field :password_confirmation, autocomplete: "off", :class =>"form-control", :placeholder =>"repeat-password" %>
 
      <%= f.submit "Sign up", :class =>"btn btn-lg btn-primary btn-block" %>
+     
       <% end %>
       <%= render "devise/shared/links" %>
   </div>
