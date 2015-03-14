@@ -44,16 +44,10 @@ input{
 .form{
 	margin-top:120px; 
 }
-.box{
-	background:rgba(255,255,255,0.8);
-	padding:1px 0px;
-	margin-bottom:60px;
-	margin-left: -5px;
-	text-align: center;  
-}
+
 .box img{
 	width:100%;
-	height: auto; 
+    height:auto; 
 }
  ul{
  	list-style: none;
@@ -68,7 +62,7 @@ span{
 
 /*------------result page style------------------*/
 .result_wrapper{
-	margin-top:230px;  
+	margin-top:130px;  
 }
 footer{
 	color:#fff;
@@ -137,6 +131,32 @@ hr{
   }
 }
 
+/*--------------------like masonry style ------------------*/
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+
+
+.row {
+ -moz-column-width: 25em;
+ -webkit-column-width: 25em;
+ -moz-column-gap: 1em;
+ -webkit-column-gap:1em; 
+  
+}
+
+.row > .col-md-4 {
+ display: inline-block;
+ padding:  .33rem;
+ width:  100%; 
+ float:none;
+}
+
+.well {
+ position:relative;
+ display: block;
+}
+
+/*--------------------------@meida style---------------------*/
 
  @media(min-width:980px) {
 	.login-con{

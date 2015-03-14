@@ -1,8 +1,9 @@
 <div class="container bg">
-    <div class="result_wrapper">
-			<% @vendor.each do |data| %>    
-			 <div class="col-sm-3">
+    <div class="result_wrapper ">
+     <div class="row">			<% @vendor.each do |data| %>    
+			 <div class="col-md-4">
 			 	<div class="box">
+			  	<div class="well"> 
 			 		<ul>
 			 		   <li><span><%= image_tag data.image%></li>
 			 		   <li><span>VENDOR NAME:</span>&nbsp;<%= data.name %></li>
@@ -11,7 +12,10 @@
 			 		   <li><span>PRODUCTS:</span>&nbsp;<%= data.type %></li>
 			 		</ul>
 			 	</div>
+			 		</div>
 			  </div>
            <% end %>
-			</div>
+           </div>
+		</div>
 	</div>
+
