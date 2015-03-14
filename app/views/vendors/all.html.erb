@@ -4,13 +4,15 @@
      <% @vendor.each do |data| %>    
 			 <div class="col-md-4">
 			 	<div class="box">
+			 	  	   <%= image_tag data.image%>
 			  	<div class="well"> 
+
 			 		<ul>
-			 		   <li><span><%= image_tag data.image%></li>
-			 		   <li><span>VENDOR NAME:</span>&nbsp;<%= data.name %></li>
-			 		   <li><span>ADDRESS:</span>&nbsp;<%= data.address %> </li>
-			 		   <li><span>TEL NO:</span>&nbsp;<%= data.telno %></li>
-			 		   <li><span>PRODUCTS:</span>&nbsp;<%= data.type %></li>
+			 		 
+			 		   <li><span>VENDOR NAME:</span>&nbsp;&nbsp;<%= data.name %></li>
+			 		   <li><span><i class="fa fa-map-marker"></i>&nbsp;&nbsp;ADDRESS:</span>&nbsp;&nbsp;<%= data.address %> </li>
+			 		   <li><span><i class="fa fa-phone"></i>&nbsp;&nbsp;TEL NO:</span>&nbsp;&nbsp;<%= data.telno %></li>
+			 		   <li><span><i class="fa fa-cart-plus"></i>&nbsp;&nbsp;PRODUCTS:</span>&nbsp;&nbsp;<%= data.type %></li>
 			 		</ul>
 			 	</div>
 			 		</div>
