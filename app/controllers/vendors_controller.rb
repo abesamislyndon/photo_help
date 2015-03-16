@@ -1,6 +1,6 @@
 class VendorsController < ApplicationController
 
-def index
+  def index
     if params[:search]
       @vendor = Vendor.search(params[:search]).order("created_at DESC")
     else
@@ -8,19 +8,21 @@ def index
     end
   end
 
+  
   def result
       @vendor = Vendor.search(params[:search]).order("created_at DESC")
   end
 
 
   def all
-  	@vendor = Vendor.all
+  	@vendor = Vendor.where(:status=>'2')
   end
-
+ 
   def new
   	@vendor = Vendor.new	
   end
 
+  
   def create
   	@vendor = Vendor.new(vendor_params)
    	if @vendor.save
@@ -28,12 +30,17 @@ def index
     else 
     render 'new'    
   	end		
-  	end
+  end
+
+  
+  def edit
+    
+  end
 
 
   private
     def vendor_params
-      params.require(:vendor).permit(:name, :address, :image, :telno, :type)
+      params.require(:vendor).permit(:name, :address, :image, :telno, :type, :status)
     end
 
   

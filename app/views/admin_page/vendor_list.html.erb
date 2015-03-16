@@ -1,0 +1,27 @@
+<div class="container bg">
+    <div class="result_wrapper ">
+    <table class="table">
+                    <thead>
+                      <tr>
+                       <th><span>VENDOR NAME:</span></th>
+       		 		   <th><span><i class="fa fa-map-marker"></i>&nbsp;&nbsp;ADDRESS:</span></th>
+       		 		   <th><span><i class="fa fa-phone"></i>&nbsp;&nbsp;TEL NO:</span></th>
+       		 		   <th><span><i class="fa fa-cart-plus"></i>&nbsp;&nbsp;PRODUCTS:</span></th>
+       		 		    <th><span><i class="fa fa-cart-plus"></i>&nbsp;&nbsp;ACTION</span></th>			
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <% @vendor.each do |data| %>
+                      <tr>       		 		  
+			 		   <td><%= data.name %></td>
+			 		   <td><%= data.address %> </td>
+			 		   <td><%= data.telno %></td>
+			 		   <td><%= data.type %></td>
+			 		   <td><%= link_to 'Destroy',@vendors, :method => :delete, :remote=>true, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %></td>
+                      </tr>    
+			          <% end %> 	
+                   </tbody> 
+     	    </table>
+		</div>
+	</div>
+
