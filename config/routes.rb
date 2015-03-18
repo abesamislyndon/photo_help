@@ -11,6 +11,6 @@ Rails.application.routes.draw do
    get  'vendors/result'
 
    get  'admin_page/vendor_list'
-   get  'admin_page/approved'
+
 
 end

@@ -15,7 +15,7 @@ class VendorsController < ApplicationController
 
 
   def all
-  	@vendor = Vendor.where(:status=>'2')
+  	@vendor = Vendor.where(:status=>'1')
   end
  
   def new
@@ -33,6 +33,13 @@ class VendorsController < ApplicationController
   end
 
   
+    def destroy
+        @vendor = Vendor.find(params[:id])
+        @vendor.destroy
+        redirect admin_page_approved_path
+      end
+
+
   def edit
     
   end
@@ -40,7 +47,7 @@ class VendorsController < ApplicationController
 
   private
     def vendor_params
-      params.require(:vendor).permit(:name, :address, :image, :telno, :type, :status)
+      params.require(:vendor).permit(:name, :address, :image, :telno, :type, :status,:id)
     end
 
   
