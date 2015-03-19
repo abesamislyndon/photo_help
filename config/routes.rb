@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
    devise_for :users
    resources :vendors, :only => [:new, :result_page, :create]
-   resources :admin_page, :only => [:vendor_list]
+   resources :admin_page, :only => [:vendor_list, :destroy]
 
    root 'vendors#index' 
    get  'vendors/login'
@@ -12,5 +12,6 @@ Rails.application.routes.draw do
 
    get  'admin_page/vendor_list'
    get  'admin_page/approved'
+     get  'admin_page/destroy'
 
 end

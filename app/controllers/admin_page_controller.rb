@@ -9,7 +9,7 @@ class AdminPageController < ApplicationController
     def destroy
         @vendor = Vendor.find(params[:id])
         @vendor.destroy
-        redirect admin_page_approved_path
+        redirect_to admin_page_vendor_list_path
       end
 
 
