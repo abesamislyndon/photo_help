@@ -15,7 +15,7 @@ class VendorsController < ApplicationController
 
 
   def all
-  	@vendor = Vendor.where(:status=>'1')
+  	@vendor = Vendor.where(:status=>'2')
   end
  
   def new
@@ -30,18 +30,6 @@ class VendorsController < ApplicationController
     else 
     render 'new'    
   	end		
-  end
-
-  
-    def destroy
-        @vendor = Vendor.find(params[:id])
-        @vendor.destroy
-        redirect admin_page_approved_path
-      end
-
-
-  def edit
-    
   end
 
 
