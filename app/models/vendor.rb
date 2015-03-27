@@ -5,6 +5,8 @@ class Vendor < ActiveRecord::Base
 
    def self.search(query)
     # where(:title, query) -> This would return an exact match of the query
+    
     where("type  like ?", "%#{query}%") 
+
   end
 end
