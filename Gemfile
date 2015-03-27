@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', '~> 3.4.1'
 gem 'paperclip', '~> 4.2.1'
 gem "font-awesome-rails"
+gem 'omniauth-facebook', '~> 2.0.1'
 
 
 

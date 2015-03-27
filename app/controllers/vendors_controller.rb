@@ -32,15 +32,10 @@ class VendorsController < ApplicationController
   	end		
   end
 
-  
-  def edit
-    
-  end
-
 
   private
     def vendor_params
-      params.require(:vendor).permit(:name, :address, :image, :telno, :type, :status)
+      params.require(:vendor).permit(:name, :address, :image, :telno, :type, :status,:id)
     end
 
   

@@ -5,18 +5,23 @@ class AdminPageController < ApplicationController
 		@vendor = Vendor.where(:status=>'1')
 	end
 
-
-    def destroy
+       
+   def destroy
         @vendor = Vendor.find(params[:id])
         @vendor.destroy
-        redirect_to admin_page_vendor_list_path
-      end
+        redirect_to admin_page_vendor_list_patt
+   end
 
-
+    def update
+    	 @vendor = Vendor.find(params[:id])
+    	 if @vendor.update_attribute(:status, "2")
+    	 	redirect_to admin_page_vendor_list_path 	
+    	 end	
+    end
 
    private
     def vendor_params
-      params.require(:vendor).permit(:status)
+      params.require(:vendor).permit(:status, :id)
     end
 
 

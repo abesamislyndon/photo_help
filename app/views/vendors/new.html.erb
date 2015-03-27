@@ -1,3 +1,4 @@
+
   <div class="control-group">
       <div class="login-con">
         <h4 class = "header-login">VENDOR DETAILS</h4>
@@ -15,13 +16,19 @@
          
           <%= f.label :type ,:class => "sr-only" %>
           <%= f.text_field :type, :class =>"form-control", :placeholder =>"Vendor products" %>
-       
-          <%= f.label :image %>
-          <%= f.file_field :image, :class =>"form-control"%>
+
+
+          <%= f.label :upload %> 
+          <%= f.file_field :image, :class =>"upload"%>
+     
 
       <%= f.submit "HELP VENDOR", class: "btn btn-lg btn-primary btn-block" %>
     <% end %>
  
     </div>
-      </div>
-</div>
+  </div>
+
+
+
+
+ 
