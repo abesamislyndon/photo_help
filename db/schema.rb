@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150326160725) do
+ActiveRecord::Schema.define(version: 20150403155958) do
+
+  create_table "admins", force: :cascade do |t|
+    t.string   "email",              limit: 255, default: "", null: false
+    t.string   "encrypted_password", limit: 255, default: "", null: false
+    t.integer  "sign_in_count",      limit: 4,   default: 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip", limit: 255
+    t.string   "last_sign_in_ip",    limit: 255
+    t.integer  "failed_attempts",    limit: 4,   default: 0
+    t.string   "unlock_token",       limit: 255
+    t.datetime "locked_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "authentications", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
@@ -35,6 +50,9 @@ ActiveRecord::Schema.define(version: 20150326160725) do
     t.string   "last_sign_in_ip",        limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "admin",                  limit: 1
+    t.string   "provider",               limit: 255
+    t.string   "uid",                    limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

@@ -3,13 +3,13 @@ class AdminPageController < ApplicationController
 
 	def vendor_list
 		@vendor = Vendor.where(:status=>'1')
-	end
-
+    end
+	
        
    def destroy
         @vendor = Vendor.find(params[:id])
         @vendor.destroy
-        redirect_to admin_page_vendor_list_patt
+        redirect_to admin_page_vendor_list_path
    end
 
     def update
