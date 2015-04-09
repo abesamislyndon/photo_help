@@ -12,17 +12,18 @@
               </tr>
               </thead>
               <tbody>
-     
-          <% @vendor.each do |data| %>
+
+           <% @vendor.each do |data| %>
             <tr>       		 		  
 			 		   <td><%= data.name %></td>
 			 		   <td><%= data.address %> </td>
 			 		   <td><%= data.telno %></td>
 			 		   <td><%= data.type %></td>
-             <td><%= link_to 'approved',{:action=>'update', :id =>data.id} %></td>
+             <td><%= link_to 'approved',{:action=>'update', :id =>data.id}, method: :update %></td>
 			 		   <td><%= link_to 'Destroy',{:action=>'destroy', :id =>data.id}, method: :delete %></td>
             </tr>    
-        <% end %> 
+          <% end %> 
+
            </tbody> 
      	    </table>
 		</div>
