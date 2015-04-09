@@ -24,6 +24,11 @@ end
 end
 
 
+  def confirmation_required?
+    super && email.present?
+  end
+
+
 
 end
 
