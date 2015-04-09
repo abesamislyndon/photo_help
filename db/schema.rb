@@ -11,7 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150409070710) do
+
+ActiveRecord::Schema.define(version: 20150403155958) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",              limit: 255, default: "", null: false
@@ -35,7 +36,6 @@ ActiveRecord::Schema.define(version: 20150409070710) do
     t.string   "token",      limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
-  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(version: 20150409070710) do
     t.string   "last_sign_in_ip",        limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "provider",               limit: 255
     t.string   "uid",                    limit: 255
-    t.boolean  "admin",                  limit: 1
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
