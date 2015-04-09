@@ -8,11 +8,14 @@ class ApplicationController < ActionController::Base
    vendors_new_path
   end
 
-def after_sign_in_path_for(resource_or_scope)
-   if request.env['omniauth.origin']
-      request.env['omniauth.origin']
-    end
+
+
+def after_sign_up_path_for(resource)
+  credit_path 
+  return request.env['omniauth.origin'] || session[:return_to] 
+end 
+
+def after_sign_in_path_for(resource)
+  return request.env['omniauth.origin'] || session[:return_to]
 end
-
-
 end
