@@ -50,9 +50,17 @@ input[type="text"].search_input{
 		color:#66BB6A;
  	}
 }
+.fb{
+	background:red !important;
+}
 
 .form{
 	margin-top:120px; 
+}
+.navbar-nav li{
+	padding-top: none !important;
+	margin-left: 40px;
+	margin-top: 20px;
 }
 
 .box img{
@@ -68,7 +76,6 @@ input[type="text"].search_input{
  	list-style: none;
  }
  li{
- 	padding:5px; 
  	margin-left:-40px; 
  	color:#B0BEC5;
  	border-bottom: 1px solid #E0E0E0;
